@@ -3,8 +3,8 @@
 %bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	RTF
-%define	pnam	Parser
+%define		pdir	RTF
+%define		pnam	Parser
 Summary:	RTF::Parser - RTF Processor
 Summary(pl):	RTF::Parser - procesor dokumentów w formacie RTF
 Name:		perl-RTF-Parser
