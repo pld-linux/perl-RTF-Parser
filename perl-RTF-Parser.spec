@@ -2,9 +2,9 @@
 Summary:	RTF-Parser perl module
 Summary(pl):	Modu³ perla RTF-Parser
 Name:		perl-RTF-Parser
-Version:	1.06
-Release:	3
-Copyright:	GPL
+Version:	1.07
+Release:	1
+License:	GPL
 Group:		Development/Languages/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
 Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/RTF/RTF-Parser-%{version}.tar.gz
