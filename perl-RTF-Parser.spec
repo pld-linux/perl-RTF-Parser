@@ -1,33 +1,26 @@
+#
+# Conditional build:
+%bcond_without	tests	# do not perform "make test"
+#
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	RTF
 %define	pnam	Parser
-Summary:	RTF::Parser Perl module
-Summary(cs):	Modul RTF::Parser pro Perl
-Summary(da):	Perlmodul RTF::Parser
-Summary(de):	RTF::Parser Perl Modul
-Summary(es):	Módulo de Perl RTF::Parser
-Summary(fr):	Module Perl RTF::Parser
-Summary(it):	Modulo di Perl RTF::Parser
-Summary(ja):	RTF::Parser Perl ¥â¥¸¥å¡¼¥ë
-Summary(ko):	RTF::Parser ÆÞ ¸ðÁÙ
-Summary(nb):	Perlmodul RTF::Parser
-Summary(pl):	Modu³ Perla RTF::Parser
-Summary(pt):	Módulo de Perl RTF::Parser
-Summary(pt_BR):	Módulo Perl RTF::Parser
-Summary(ru):	íÏÄÕÌØ ÄÌÑ Perl RTF::Parser
-Summary(sv):	RTF::Parser Perlmodul
-Summary(uk):	íÏÄÕÌØ ÄÌÑ Perl RTF::Parser
-Summary(zh_CN):	RTF::Parser Perl Ä£¿é
+Summary:	RTF::Parser - RTF Processor
+Summary(pl):	RTF::Parser - procesor dokumentów w formacie RTF
 Name:		perl-RTF-Parser
 Version:	1.09
 Release:	1
-License:	GPL
+# same as perl
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	249eda70ecb9fe5e9231d31c53587b31
 Patch0:		%{name}-paths.patch
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	perl-devel >= 5.6
+%if %{with tests}
+BuildRequires:	perl-RTF-Tokenizer
+%endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -46,12 +39,14 @@ RTF::Parser - procesor dokumentów w formacie RTF.
 	INSTALLDIRS=vendor
 %{__make}
 
+%{?with_tests:%{__make} test}
+
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
-
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 install examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %clean
@@ -61,7 +56,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc Changes README
 %attr(755,root,root) %{_bindir}/rtf2html
-%{perl_vendorlib}/RTF
+%{perl_vendorlib}/RTF/*
 %dir %{_examplesdir}/%{name}-%{version}
 %attr(755,root,root) %{_examplesdir}/%{name}-%{version}/*
 %{_mandir}/*/*
