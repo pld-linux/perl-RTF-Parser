@@ -1,12 +1,11 @@
+%include	/usr/lib/rpm/macros.perl
 %define	pdir	RTF
 %define	pnam	Parser
-%include	/usr/lib/rpm/macros.perl
 Summary:	RTF-Parser perl module
 Summary(pl):	Modu³ perla RTF-Parser
 Name:		perl-RTF-Parser
 Version:	1.07
-Release:	5
-
+Release:	6
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -23,7 +22,7 @@ RTF-Parser - RTF Processor.
 RTF-Parser - procesor dokumentów w formacie RTF.
 
 %prep
-%setup -q -n RTF-Parser-%{version}
+%setup -q -n %{pdir}-%{pnam}-%{version}
 %patch -p0
 
 %build
