@@ -7,8 +7,8 @@ Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
-Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/RTF/RTF-Parser-%{version}.tar.gz
-Patch:		perl-RTF-Parser-paths.patch
+Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/RTF/RTF-Parser-%{version}.tar.gz
+Patch0:		perl-RTF-Parser-paths.patch
 BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRequires:	perl >= 5.005_03-14
 %requires_eq	perl
@@ -16,7 +16,7 @@ Requires:	%{perl_sitearch}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-RTF-Parser - RTF Processor. 
+RTF-Parser - RTF Processor.
 
 %description -l pl
 RTF-Parser - procesor dokumentów w formacie RTF.
