@@ -19,12 +19,12 @@ Summary(sv):	RTF::Parser Perlmodul
 Summary(uk):	Модуль для Perl RTF::Parser
 Summary(zh_CN):	RTF::Parser Perl дё©И
 Name:		perl-RTF-Parser
-Version:	1.07
-Release:	8
+Version:	1.09
+Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	ee8e5e0a734451dee084489dab44e4d8
+# Source0-md5:	249eda70ecb9fe5e9231d31c53587b31
 Patch0:		%{name}-paths.patch
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	perl-devel >= 5.6
@@ -64,3 +64,4 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_vendorlib}/RTF
 %dir %{_examplesdir}/%{name}-%{version}
 %attr(755,root,root) %{_examplesdir}/%{name}-%{version}/*
+%{_mandir}/*/*
