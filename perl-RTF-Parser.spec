@@ -1,11 +1,26 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	RTF
 %define	pnam	Parser
-Summary:	RTF::Parser perl module
-Summary(pl):	Modu³ perla RTF::Parser
+Summary:	RTF::Parser Perl module
+Summary(cs):	Modul RTF::Parser pro Perl
+Summary(da):	Perlmodul RTF::Parser
+Summary(de):	RTF::Parser Perl Modul
+Summary(es):	Módulo de Perl RTF::Parser
+Summary(fr):	Module Perl RTF::Parser
+Summary(it):	Modulo di Perl RTF::Parser
+Summary(ja):	RTF::Parser Perl ¥â¥¸¥å¡¼¥ë
+Summary(ko):	RTF::Parser ÆÞ ¸ðÁÙ
+Summary(no):	Perlmodul RTF::Parser
+Summary(pl):	Modu³ Perla RTF::Parser
+Summary(pt):	Módulo de Perl RTF::Parser
+Summary(pt_BR):	Módulo Perl RTF::Parser
+Summary(ru):	íÏÄÕÌØ ÄÌÑ Perl RTF::Parser
+Summary(sv):	RTF::Parser Perlmodul
+Summary(uk):	íÏÄÕÌØ ÄÌÑ Perl RTF::Parser
+Summary(zh_CN):	RTF::Parser Perl Ä£¿é
 Name:		perl-RTF-Parser
 Version:	1.07
-Release:	6
+Release:	7
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -31,17 +46,19 @@ perl Makefile.PL
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-gzip -9nf Changes README
+install examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz examples/tests.pl
+%doc Changes README
 %attr(755,root,root) %{_bindir}/rtf2html
-%{perl_sitelib}/RTF/*.pm
-%{perl_sitelib}/RTF/HTML
+%{perl_sitelib}/RTF
+%dir %{_examplesdir}/%{name}-%{version}
+%attr(755,root,root) %{_examplesdir}/%{name}-%{version}/*
