@@ -10,7 +10,7 @@ Summary(fr):	Module Perl RTF::Parser
 Summary(it):	Modulo di Perl RTF::Parser
 Summary(ja):	RTF::Parser Perl ¥â¥¸¥å¡¼¥ë
 Summary(ko):	RTF::Parser ÆÞ ¸ðÁÙ
-Summary(no):	Perlmodul RTF::Parser
+Summary(nb):	Perlmodul RTF::Parser
 Summary(pl):	Modu³ Perla RTF::Parser
 Summary(pt):	Módulo de Perl RTF::Parser
 Summary(pt_BR):	Módulo Perl RTF::Parser
