@@ -1,8 +1,8 @@
---- examples/tests.pl~	Wed Mar 10 14:34:16 1999
-+++ examples/tests.pl	Mon Oct 18 18:49:28 1999
+--- examples/tests.pl.orig	Fri Feb 18 01:47:51 2000
++++ examples/tests.pl	Fri Feb 18 01:47:58 2000
 @@ -1,4 +1,4 @@
 -#!/usr/local/bin/perl -w
 +#!/usr/bin/perl -w
+ 
  require 5.000;
  use strict;
- 
