@@ -20,7 +20,7 @@ Summary(uk):	Модуль для Perl RTF::Parser
 Summary(zh_CN):	RTF::Parser Perl дё©И
 Name:		perl-RTF-Parser
 Version:	1.07
-Release:	7
+Release:	8
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
