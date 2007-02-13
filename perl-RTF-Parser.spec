@@ -6,7 +6,7 @@
 %define		pdir	RTF
 %define		pnam	Parser
 Summary:	RTF::Parser - RTF Processor
-Summary(pl.UTF-8):   RTF::Parser - procesor dokumentów w formacie RTF
+Summary(pl.UTF-8):	RTF::Parser - procesor dokumentów w formacie RTF
 Name:		perl-RTF-Parser
 Version:	1.09
 Release:	1
