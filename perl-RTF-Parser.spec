@@ -9,7 +9,7 @@ Summary:	RTF::Parser - RTF Processor
 Summary(pl.UTF-8):	RTF::Parser - procesor dokumentów w formacie RTF
 Name:		perl-RTF-Parser
 Version:	1.09
-Release:	1
+Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
