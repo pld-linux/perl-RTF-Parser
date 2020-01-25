@@ -4,7 +4,6 @@
 
 %define		pdir	RTF
 %define		pnam	Parser
-%include	/usr/lib/rpm/macros.perl
 Summary:	RTF::Parser - RTF Processor
 Summary(pl.UTF-8):	RTF::Parser - procesor dokumentów w formacie RTF
 Name:		perl-RTF-Parser
